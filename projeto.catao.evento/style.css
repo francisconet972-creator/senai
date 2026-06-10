@@ -1,0 +1,22 @@
+img{
+    width: 500px;
+}
+.c{
+    border-radius: 30px;
+    margin: 30px;
+    padding: 30px;
+    background-color: #585858;
+    width: 500px;
+}
+h1{
+    color: #00d9ff;
+    font-size: 30px;
+}
+p{
+  font-size: 27px;  
+  line-height: 15px;
+}
+#m{
+    color: #02ffff;
+}
+
