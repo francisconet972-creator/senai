@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(12, 63, 122);
+}
+h1{
+    color: cyan;
+    text-align: center;
+}
+.container{
+    margin: 0 auto;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(./assets/e5988129e9f43265e849d712f6e5cd67\ 1.png);
+    background-size: cover;
+    border: 2px solid cyan;
+    border-radius: 15px;
+}
+.fig{
+    width: 150px;
+    padding: 50px;
+}
