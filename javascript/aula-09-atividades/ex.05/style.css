@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#analise {
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 8px;
+}

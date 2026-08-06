@@ -8,5 +8,8 @@
 }
 
 .is-active {
+    margin-left: 500px;
     background-color: green;
+    width: 350px;
+    display: none;
 }

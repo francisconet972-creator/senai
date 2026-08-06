@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com QuerySelector</title>
+</head>
+<body>
+
+    <h1>Exemplo de Botão</h1>
+
+    <button id="btnAcao">Clique aqui</button>
+
+    <p id="infoBotao"></p>
+
+    <script>
+        const botao = document.querySelector('#btnAcao');
+        const info = document.querySelector('#infoBotao');
+
+        botao.addEventListener('click', function() {
+            info.textContent = botao.textContent;
+        });
+    </script>
+
+</body>
+</html>
