@@ -1,0 +1,29 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  min-height: 1.5em; /* Garante que o layout não pule quando o texto for inserido */
+}

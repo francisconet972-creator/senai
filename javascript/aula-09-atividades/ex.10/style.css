@@ -1,0 +1,21 @@
+/* Classe para ocultar o elemento */
+.oculto {
+  display: none;
+}
+
+/* Estilização da página */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
