@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Money Empire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TELA DE LOADING -->
+
+    <div id="loadingScreen">
+
+        <div class="loading-logo">$</div>
+
+        <h1>
+            MONEY <span>EMPIRE</span>
+        </h1>
+
+        <p>FINANCIAL COMMAND CENTER</p>
+
+        <div class="loading-bar">
+            <div></div>
+        </div>
+
+    </div>
+
+
+    <!-- FUNDO -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                $
+            </div>
+
+            <div>
+                <small>MONEY</small>
+                <strong>EMPIRE</strong>
+            </div>
+
+        </div>
+
+
+        <div class="market-status">
+
+            <span></span>
+
+            MARKET OPEN
+
+        </div>
+
+
+        <div class="header-right">
+
+            <div class="networth">
+
+                <small>NET WORTH</small>
+
+                <strong id="netWorth">
+                    $0
+                </strong>
+
+            </div>
+
+            <button id="soundButton" class="icon-button">
+                ♫
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="game-container">
+
+
+        <!-- PAINEL PRINCIPAL -->
+
+        <section class="main-panel">
+
+
+            <!-- INTRO -->
+
+            <div class="intro">
+
+                <div class="eyebrow">
+                    ● FINANCIAL COMMAND CENTER
+                </div>
+
+                <h1>
+                    BUILD YOUR
+                    <span>EMPIRE.</span>
+                </h1>
+
+                <p>
+                    Comece com um clique.
+                    Termine controlando mercados.
+                </p>
+
+            </div>
+
+
+
+            <!-- DINHEIRO -->
+
+            <div class="money-display">
+
+                <div class="money-top">
+
+                    <span>
+                        AVAILABLE CAPITAL
+                    </span>
+
+                    <b id="rank">
+                        NOVICE
+                    </b>
+
+                </div>
+
+
+                <div class="money">
+
+                    <small>$</small>
+
+                    <strong id="money">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="income-row">
+
+                    <span>
+                        CLICK
+                        <b id="clickPower">
+                            $1
+                        </b>
+                    </span>
+
+                    <span>
+                        PASSIVE
+                        <b id="passiveIncome">
+                            $0/s
+                        </b>
+                    </span>
+
+                    <span>
+                        MULTIPLIER
+                        <b id="multiplier">
+                            x1.00
+                        </b>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ÁREA DO CLIQUE -->
+
+            <div class="click-area">
+
+                <div class="energy-ring ring-one"></div>
+                <div class="energy-ring ring-two"></div>
+                <div class="energy-ring ring-three"></div>
+
+
+                <div class="particle particle-one"></div>
+                <div class="particle particle-two"></div>
+                <div class="particle particle-three"></div>
+
+
+                <button id="moneyButton" class="money-button">
+
+                    <div class="coin">
+
+                        <div class="coin-inner">
+
+                            <strong>
+                                $
+                            </strong>
+
+                            <small>
+                                MONEY EMPIRE
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+
+                <div class="click-text">
+                    CLICK TO GENERATE CAPITAL
+                </div>
+
+
+                <div id="combo" class="combo">
+                    COMBO x1
+                </div>
+
+            </div>
+
+
+
+            <!-- ESTATÍSTICAS -->
+
+            <div class="statistics">
+
+                <div>
+
+                    <small>
+                        LEVEL
+                    </small>
+
+                    <strong id="level">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        XP
+                    </small>
+
+                    <strong id="xp">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        CLICKS
+                    </small>
+
+                    <strong id="clicks">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        BEST COMBO
+                    </small>
+
+                    <strong id="bestCombo">
+                        x1
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- XP -->
+
+            <div class="xp-container">
+
+                <div class="xp-header">
+
+                    <span>
+                        EMPIRE PROGRESSION
+                    </span>
+
+                    <b id="xpPercent">
+                        0%
+                    </b>
+
+                </div>
+
+                <div class="xp-bar">
+
+                    <div id="xpProgress"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENTO -->
+
+            <div class="event-box">
+
+                <div class="event-icon">
+                    ◈
+                </div>
+
+                <div class="event-info">
+
+                    <small>
+                        MARKET EVENT
+                    </small>
+
+                    <strong id="eventName">
+                        Stable Market
+                    </strong>
+
+                    <span id="eventDescription">
+                        Economy operating normally.
+                    </span>
+
+                </div>
+
+                <strong id="eventTimer">
+                    --
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+
+            <!-- MENU -->
+
+            <nav class="tabs">
+
+                <button class="tab active" data-tab="assets">
+                    ASSETS
+                </button>
+
+                <button class="tab" data-tab="research">
+                    RESEARCH
+                </button>
+
+                <button class="tab" data-tab="missions">
+                    MISSIONS
+                </button>
+
+                <button class="tab" data-tab="legacy">
+                    LEGACY
+                </button>
+
+            </nav>
+
+
+
+            <!-- ASSETS -->
+
+            <section id="assets" class="tab-content active">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <small>
+                            INVESTMENT CENTER
+                        </small>
+
+                        <h2>
+                            ACQUIRE ASSETS
+                        </h2>
+
+                    </div>
+
+                    <span id="assetCount">
+                        0 ASSETS
+                    </span>
+
+                </div>
+
+
+                <div id="assetList" class="asset-list"></div>
+
+            </section>
+
+
+
+            <!-- RESEARCH -->
+
+            <section id="research" class="tab-content">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <small>
+                            PERMANENT TECHNOLOGY
+                        </small>
+
+                        <h2>
+                            RESEARCH TREE
+                        </h2>
+
+                    </div>
+
+                    <span id="researchPoints">
+                        0 RP
+                    </span>
+
+                </div>
+
+
+                <div id="researchList"></div>
+
+            </section>
+
+
+
+            <!-- MISSÕES -->
+
+            <section id="missions" class="tab-content">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <small>
+                            OBJECTIVES
+                        </small>
+
+                        <h2>
+                            MISSION CONTROL
+                        </h2>
+
+                    </div>
+
+                    <span id="missionCount">
+                        0 / 8
+                    </span>
+
+                </div>
+
+
+                <div id="missionList"></div>
+
+            </section>
+
+
+
+            <!-- LEGACY -->
+
+            <section id="legacy" class="tab-content">
+
+                <div class="legacy-card">
+
+                    <div class="crown">
+                        ♛
+                    </div>
+
+                    <small>
+                        LEGACY SYSTEM
+                    </small>
+
+                    <h2>
+                        REBUILD YOUR EMPIRE
+                    </h2>
+
+                    <p>
+                        Reinicie sua temporada atual para receber
+                        <b>Empire Points</b> e desbloquear bônus permanentes.
+                    </p>
+
+
+                    <div class="legacy-stat">
+
+                        <span>
+                            AVAILABLE
+                        </span>
+
+                        <strong id="legacyPoints">
+                            0 EP
+                        </strong>
+
+                    </div>
+
+
+                    <div class="legacy-stat">
+
+                        <span>
+                            NEXT PRESTIGE
+                        </span>
+
+                        <strong>
+                            $1M
+                        </strong>
+
+                    </div>
+
+
+                    <button id="prestigeButton" class="prestige-button" disabled>
+                        REBUILD EMPIRE
+                    </button>
+
+                </div>
+
+
+                <div class="legacy-bonuses">
+
+                    <div>
+
+                        <small>
+                            GLOBAL INCOME
+                        </small>
+
+                        <strong id="globalBonus">
+                            +0%
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>
+                            OFFLINE EFFICIENCY
+                        </small>
+
+                        <strong>
+                            50%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RESUMO -->
+
+            <div class="financial-overview">
+
+                <div class="overview-title">
+                    FINANCIAL OVERVIEW
+                </div>
+
+                <div>
+
+                    <span>
+                        Lifetime earnings
+                    </span>
+
+                    <b id="lifetime">
+                        $0
+                    </b>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Current capital
+                    </span>
+
+                    <b id="currentMoney">
+                        $0
+                    </b>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Passive income
+                    </span>
+
+                    <b id="overviewPassive">
+                        $0/s
+                    </b>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Empire Points
+                    </span>
+
+                    <b id="empirePoints">
+                        0
+                    </b>
+
+                </div>
+
+            </div>
+
+
+
+            <button id="resetButton" class="reset-button">
+                RESET ALL PROGRESS
+            </button>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- MODAL OFFLINE -->
+
+    <div id="offlineModal" class="modal hidden">
+
+        <div class="modal-card">
+
+            <div class="modal-symbol">
+                ◷
+            </div>
+
+            <small>
+                WELCOME BACK
+            </small>
+
+            <h2>
+                YOUR EMPIRE KEPT WORKING.
+            </h2>
+
+            <p id="offlineText">
+                Seus negócios continuaram produzindo dinheiro.
+            </p>
+
+            <button id="collectOffline" class="collect-button">
+                COLLECT PROFITS
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOAST -->
+
+    <div id="toast" class="toast">
+
+        <div class="toast-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <small>
+                SYSTEM
+            </small>
+
+            <strong id="toastText">
+                Saved
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NÚMEROS FLUTUANTES -->
+
+    <div id="floatingNumbers"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
